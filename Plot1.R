@@ -20,7 +20,7 @@ df$Global_active_power <- as.numeric(df$Global_active_power)
 ##create subset of dates 2007-02-01 - 2007-02-02.
 df_subset <- subset(df, Date == as.Date("2007-02-01") | Date == as.Date("2007-02-02"))
 
-
+##create plot 1
 png(file = "plot1.png", width = 480, height = 480) ## open PNG device; creates "plot1.png" in working directory.
 hist(df_subset$Global_active_power, breaks = 15, col = "red",
      main = "Global Active Power", xlab ="Global Active Power (kilowatts)", ylab = "Frequency")##creates figure 1 
